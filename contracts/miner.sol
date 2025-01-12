@@ -200,10 +200,12 @@ contract Miner is Ownable {
         seasson++;
     }
 
+    //todo this dont work
     function getUpdatePrice(uint256 deep, uint256 workers) public view returns (uint256) {
         return mineBaseInfo[deep].baseCost * (curveMultiplier ** workers);
     }
 
+    //todo this dont work
     function getMineProduction(uint256 deep, uint256 workers) public view returns (uint256) {
         return mineBaseInfo[deep].baseProduction * ((curveMultiplier ** workers) / 100);
     }
