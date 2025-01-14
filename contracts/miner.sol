@@ -198,6 +198,7 @@ contract Miner is Ownable {
         claimeablePrizeDateLimit = _claimeablePrizeDateLimit;
         seassonsPrizes[seasson] = seasonData(totalGems, currency.balanceOf(address(this)));
         seasson++;
+        totalGems = 0;
     }
 
     //todo this dont work
